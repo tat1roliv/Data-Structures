@@ -8,8 +8,9 @@ public class Programa {
 		
 		System.out.println("Tamanho: " + lista.getTamanho());
 		
-		lista.adicionar("AC");
-		lista.adicionar("BA");
+		
+		lista.adicionar("AC");//add elemento na lista vazia
+		lista.adicionar("BA");//add elemento lista ja ocupada
 		lista.adicionar("CE");
 		lista.adicionar("DF");
 		
@@ -20,6 +21,24 @@ public class Programa {
 		
 		System.out.println(lista.get(0).getValor());
 		System.out.println(lista.get(2).getValor());
+		
+		for(int i=0; i< lista.getTamanho(); i++ ) {
+			System.out.print(lista.get(i).getValor()+ " ");
+		}
+		
+		lista.remover("DF"); //remover elemento meio da lista
+		
+		System.out.println("\n removendo elemento do meio da lista : ");
+		for(int i=0; i< lista.getTamanho(); i++ ) {
+			System.out.print( lista.get(i).getValor() + " ");
+		}
+		
+		lista.adicionar("SP");
+		
+		System.out.println("\n  add estado :");
+		for(int i=0; i< lista.getTamanho(); i++ ) {
+			System.out.print( lista.get(i).getValor() + " ");
+		}
 	
 	}
 }
