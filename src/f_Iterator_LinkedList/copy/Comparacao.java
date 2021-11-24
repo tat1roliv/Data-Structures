@@ -1,4 +1,4 @@
-package e_LinkedList_Vs_Vector.copy;
+package f_Iterator_LinkedList.copy;
 
 import java.util.ArrayList;
 
@@ -43,15 +43,28 @@ public class Comparacao {
 	    }
 	    
 	    tempoFinal = System.currentTimeMillis();
-	    System.out.println("Tempo leitura vetor: " + (tempoInicial-tempoFinal));
+	    System.out.println("Tempo leitura vetor: " + (tempoFinal-tempoInicial));
 	    
 	    tempoInicial2 = System.currentTimeMillis();
 	    for (int i=0; i < lista.getTamanho(); i++) {
 	    	lista.get(i);
 	    }
-	    
+	      
 	    tempoFinal2 = System.currentTimeMillis();
-	    System.out.println("Tempo leitura lista: " + (tempoInicial2-tempoFinal2));
+	    System.out.println("Tempo leitura lista: " + (tempoFinal2-tempoInicial2));
+	    
+	    
+	    long tempoInicial3 = System.currentTimeMillis();//captura tempoInicial em mls
+		long tempoFinal3; 
+		
+		IteratorListaLigada<Integer> iterator = lista.getIterator();
+		
+		while (iterator.temProximo()) {
+			iterator.getProximo();
+		}
+		
+	    tempoFinal3 = System.currentTimeMillis();
+	    System.out.println("Tempo leitura lista com iterator: " + (tempoFinal3-tempoInicial3));
 	    
 
 	}
