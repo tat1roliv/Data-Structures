@@ -32,10 +32,6 @@ public class Main {
 			System.out.println("não achou");
 		}
 		
-		
-		
-		
-		
 
 	}
 
