@@ -21,13 +21,12 @@ public class Main {
 		System.out.println("\narvore PosOrdem com 3 elementos => menorEsq -> maiorDir -> raiz");
 		arvore.posOrdem(arvore.getRaiz());
 		
-		arvore.adicionar(8);
+
 		arvore.adicionar(9);
 		arvore.adicionar(7);
-		arvore.adicionar(18);
 		arvore.adicionar(13);
 		arvore.adicionar(23);
-		
+		/*
 		System.out.println("\narvore emOrdem com n elementos");
 		arvore.emOrdem(arvore.getRaiz());
 		
@@ -36,6 +35,18 @@ public class Main {
 		
 		System.out.println("\narvore PosOrdem com n elementos");
 		arvore.posOrdem(arvore.getRaiz());
+		*/
+		arvore.remover(23);
+		System.out.println("\nremovendo elementos da arvore 1");
+		arvore.emOrdem(arvore.getRaiz());
+		
+		arvore.remover(9);
+		System.out.println("\nremovendo elementos da arvore 1");
+		arvore.emOrdem(arvore.getRaiz());
+		
+		arvore.remover(7);
+		System.out.println("\nremovendo elementos da arvore 1");
+		arvore.emOrdem(arvore.getRaiz());
 	}
 
 }
