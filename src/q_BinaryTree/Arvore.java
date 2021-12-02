@@ -116,6 +116,8 @@ public class Arvore<TIPO extends Comparable> {//ext a clase para usar o metodo C
 					substituto = substituto.getEsquerda();
 				}
 				
+				substituto.setEsquerda(atual.getEsquerda());
+				
 				if (paiAtual != null) {
 					//removeu o elemento da arvore
 					if (substituto.getValor().compareTo(paiSubstituto.getValor()) == -1) {//substituto < paiSubstituto
